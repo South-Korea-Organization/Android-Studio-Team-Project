@@ -24,11 +24,13 @@ import com.himedia.androidshoppingmall.Recycler.SelectRecyclerAdapter;
 import com.himedia.androidshoppingmall.Recycler.ShopRecyclerAdapter;
 
 public class ShopFragment extends Fragment implements ItemClickListener {
-    private static final String TYPE_TOP = "Top";
-    private static final String TYPE_BOTTOM = "Bottom";
-    private static final String TYPE_ACC = "Acc";
+    private static final String TYPE_001 = "화환";
+    private static final String TYPE_002 = "관상식물";
+    private static final String TYPE_003 = "기능성식물";
 
-    private static final String TYPE_HI = "HI";
+    private static final String TYPE_004 = "꽃배달서비스";
+
+    private static final String TYPE_005 = "부가제품";
 
     private View view;
     private RecyclerView recyclerView;
@@ -79,13 +81,15 @@ public class ShopFragment extends Fragment implements ItemClickListener {
     public void onItemClick(View v, int position) {
         String type = String.valueOf(((TextView)(v.findViewById(R.id.typeSelectTv))).getText());
 
-        if(type.equals(TYPE_TOP)) {
+        if(type.equals(TYPE_001)) {
             showProduct(type);
-        } else if(type.equals(TYPE_BOTTOM)) {
+        } else if(type.equals(TYPE_002)) {
             showProduct(type);
-        } else if(type.equals(TYPE_ACC)) {
+        } else if(type.equals(TYPE_003)) {
             showProduct(type);
-        } else if(type.equals(TYPE_HI)) {
+        } else if(type.equals(TYPE_004)) {
+            showProduct(type);
+        } else if(type.equals(TYPE_005)) {
             showProduct(type);
         }
     }

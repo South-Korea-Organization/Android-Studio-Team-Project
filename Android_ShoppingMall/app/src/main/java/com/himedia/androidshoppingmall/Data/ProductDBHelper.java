@@ -151,24 +151,31 @@ public class ProductDBHelper extends SQLiteOpenHelper {
     }
 
     private void initProduct(){
-        init("product", 1, "청자켓", 73000, getByteArrayFromDrawable(R.drawable.top_blue_jacket), "top");
-        init("product", 2,"진청바지", 56000, getByteArrayFromDrawable(R.drawable.bottom_deepblue_jean), "bottom");
-        init("product", 3, "무스탕", 130000, getByteArrayFromDrawable(R.drawable.top_black_mustang), "top");
-        init("product", 4, "신발", 69000, getByteArrayFromDrawable(R.drawable.black_shoes), "acc");
-        init("product", 5, "팔찌", 12900, getByteArrayFromDrawable(R.drawable.black_bracelet), "acc");
-        init("product", 6, "맨투맨", 25900, getByteArrayFromDrawable(R.drawable.top_beige_mantoman), "top");
-        init("product", 7, "벨트", 15000, getByteArrayFromDrawable(R.drawable.belt), "acc");
-        init("product", 8, "체크바지", 28900, getByteArrayFromDrawable(R.drawable.bottom_beige_pants), "bottom");
-        init("product", 9, "슬랙스", 45900, getByteArrayFromDrawable(R.drawable.bottom_beige_slacks), "bottom");
-        init("product", 10, "면바지", 38000, getByteArrayFromDrawable(R.drawable.bottom_black_pants), "bottom");
-        init("product", 11, "청바지", 61200, getByteArrayFromDrawable(R.drawable.bottom_blue_jean), "bottom");
-        init("product", 12, "시계", 152000, getByteArrayFromDrawable(R.drawable.clock), "acc");
-        init("product", 13, "에코백", 6900, getByteArrayFromDrawable(R.drawable.echobag), "acc");
-        init("product", 14, "양말", 2500, getByteArrayFromDrawable(R.drawable.socks), "acc");
-        init("product", 15, "선글라스", 32900, getByteArrayFromDrawable(R.drawable.sunglass), "acc");
-        init("product", 16, "단가라", 23000, getByteArrayFromDrawable(R.drawable.top_red_dangara), "top");
-        init("product", 17, "셔츠", 27000, getByteArrayFromDrawable(R.drawable.top_shirts), "top");
-        init("product", 18, "니트", 29000, getByteArrayFromDrawable(R.drawable.top_white_neat), "top");
+        init("product", 1, "근조화환1", 1000, getByteArrayFromDrawable(R.drawable.g_haohan), "화환");
+        init("product", 2,"근조화환2", 2000, getByteArrayFromDrawable(R.drawable.g_haohan_2), "화환");
+        init("product", 3, "근조화환3", 1000, getByteArrayFromDrawable(R.drawable.g_haohan_3), "화환");
+        init("product", 4, "근조화환4", 2000, getByteArrayFromDrawable(R.drawable.g_haohan_4), "화환");
+        init("product", 5, "근조화환5", 10000, getByteArrayFromDrawable(R.drawable.g_haohan_5), "화환");
+        init("product", 6, "동양란1", 2000, getByteArrayFromDrawable(R.drawable.d_yangran_1), "관상식물");
+        init("product", 7, "동양란2", 10000, getByteArrayFromDrawable(R.drawable.d_yangran_2), "관상식물");
+        init("product", 8, "동양란3", 2000, getByteArrayFromDrawable(R.drawable.d_yangran_3), "관상식물");
+        init("product", 9, "동양란4", 2000, getByteArrayFromDrawable(R.drawable.d_yangran_4), "관상식물");
+        init("product", 10, "동양란5", 2000, getByteArrayFromDrawable(R.drawable.d_yangran_5), "관상식물");
+        init("product", 11, "공기정화식물1", 10000, getByteArrayFromDrawable(R.drawable.k_jeonghao_1), "기능성식물");
+        init("product", 12, "공기정화식물2", 2000, getByteArrayFromDrawable(R.drawable.k_jeonghao_2), "기능성식물");
+        init("product", 13, "공기정화식물3", 10000, getByteArrayFromDrawable(R.drawable.k_jeonghao_3), "기능성식물");
+        init("product", 14, "공기정화식물4", 3000, getByteArrayFromDrawable(R.drawable.k_jeonghao_4), "기능성식물");
+        init("product", 15, "공기정화식물5", 10000, getByteArrayFromDrawable(R.drawable.k_jeonghao_5), "기능성식물");
+        init("product", 16, "꽃다발1", 3000, getByteArrayFromDrawable(R.drawable.f_bal_1), "꽃배달서비스");
+        init("product", 17, "꽃다발2", 10000, getByteArrayFromDrawable(R.drawable.f_bal_2), "꽃배달서비스");
+        init("product", 18, "꽃다발3", 3000, getByteArrayFromDrawable(R.drawable.f_bal_3), "꽃배달서비스");
+        init("product", 19, "꽃다발4", 3000, getByteArrayFromDrawable(R.drawable.f_bal_4), "꽃배달서비스");
+        init("product", 20, "꽃다발5", 10000, getByteArrayFromDrawable(R.drawable.f_bal_5), "꽃배달서비스");
+        init("product", 21, "개업식화분6", 3000, getByteArrayFromDrawable(R.drawable.g_haobun_06), "부가제품");
+        init("product", 22, "개업식화분7", 10000, getByteArrayFromDrawable(R.drawable.g_haobun_07), "부가제품");
+        init("product", 23, "개업식화분8", 3000, getByteArrayFromDrawable(R.drawable.g_haobun_08), "부가제품");
+        init("product", 24, "개업식화분9", 10000, getByteArrayFromDrawable(R.drawable.g_haobun_09), "부가제품");
+        init("product", 25, "개업식화분10", 3000, getByteArrayFromDrawable(R.drawable.g_haobun_10), "부가제품");
     }
 
     private void init(String tableName, int id, String pName, int pPrice, byte[] pImage, String type){

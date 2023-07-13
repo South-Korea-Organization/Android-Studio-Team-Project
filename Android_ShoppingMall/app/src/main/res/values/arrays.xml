@@ -9,9 +9,10 @@
     </string-array>
 
     <string-array name="type">
-        <item>Top</item>
-        <item>Bottom</item>
-        <item>Acc</item>
-        <item>HI</item>
+        <item>화환</item>
+        <item>관상식물</item>
+        <item>기능성식물</item>
+        <item>꽃배달서비스</item>
+        <item>부가제품</item>
     </string-array>
 </resources>

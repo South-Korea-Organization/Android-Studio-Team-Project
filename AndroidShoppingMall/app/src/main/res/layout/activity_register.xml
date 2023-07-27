@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity" >
+
+    <TextView
+        android:id="@+id/infoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/register_info"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/useridTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/id"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoTv" />
+
+    <EditText
+        android:id="@+id/idEt"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnCheckDuplicateId"
+        app:layout_constraintTop_toBottomOf="@+id/infoTv" />
+
+    <Button
+        android:id="@+id/btnCheckDuplicateId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="OnClickCheckDuplicateID"
+        android:text="ID 체크"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoTv" />
+
+    <TextView
+        android:id="@+id/pwTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/pw"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useridTv" />
+
+    <EditText
+        android:id="@+id/pwEt"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittxt"
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:ems="10"
+        android:inputType="textWebPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEt" />
+
+    <TextView
+        android:id="@+id/pwChkTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/pw_chk"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwTv" />
+
+    <EditText
+        android:id="@+id/pwChkEt"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittxt"
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:ems="10"
+        android:inputType="textWebPassword"
+        android:textSize="16sp"
+        android:imeOptions="actionDone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwEt" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwChkTv" />
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittxt"
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwChkTv" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/email"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+    <EditText
+        android:id="@+id/email1Et"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:text=""
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/emailAnotaion"
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+    <EditText
+        android:id="@+id/emailAnotaion"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="0"
+        android:imeOptions="actionDone"
+        android:text="@"
+        android:enabled="false"
+        android:textColor="@color/colorRed"
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/email2Et"
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+    <EditText
+        android:id="@+id/email2Et"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:text=""
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+    <TextView
+        android:id="@+id/genderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/gender"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTv" />
+
+    <RadioGroup
+        android:id="@+id/genderRg"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email1Et">
+
+        <RadioButton
+            android:id="@+id/maleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gender_male"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/femaleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gender_female"
+            android:textSize="16sp" />
+    </RadioGroup>
+    <!--
+    <TextView
+        android:id="@+id/yearsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/years"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderTv" />
+
+    <Spinner
+        android:id="@+id/yearsSppiner"
+        android:dropDownWidth="280dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRg" />
+        // -->
+
+    <TextView
+        android:id="@+id/hpTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="휴대폰"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderTv" />
+
+    <EditText
+        android:id="@+id/hp1Et"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:text=""
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/hp2Et"
+        app:layout_constraintTop_toBottomOf="@+id/genderRg" />
+
+    <EditText
+        android:id="@+id/hp2Et"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:text=""
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/hp3Et"
+        app:layout_constraintTop_toBottomOf="@+id/genderRg" />
+
+    <EditText
+        android:id="@+id/hp3Et"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittxt"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:text=""
+        android:textCursorDrawable="@drawable/edittxt_cursor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRg" />
+
+    <TextView
+        android:id="@+id/modifyOkTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onOkBtnClick"
+        android:text="@string/okay"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/cancelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/cancel"
+        android:textSize="20sp"
+        android:onClick="onCancelBtnClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

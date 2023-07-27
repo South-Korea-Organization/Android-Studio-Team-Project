@@ -1,0 +1,65 @@
+-- oracle 
+select t.*
+          from(
+			select g.*,d.fileName from t_shopping_goods g, t_goods_detail_image d
+        	where g.goods_id=d.goods_id 
+        	and d.filetype='main_image'
+        	and goods_status='newbook'
+            order by g.goods_creDate desc)  t
+	             where   rowNum <16
+
+-- mysql
+ select t.*
+          from(
+			select g.*,d.fileName from t_shopping_goods g, t_goods_detail_image d
+        	where g.goods_id=d.goods_id 
+        	and d.filetype='main_image'
+        	and goods_status=#{goodsStatus}
+            order by g.goods_id )  t
+	             
+	        limit 0, 16    
+
+Activity/Fragment  -> Fragment 인자 전달
+
+FragmentManager manager = getSupportFragmentManager();
+FragmentTransaction transaction = manager.beginTransaction();
+
+Bundle bundle = new Bundle();
+
+// 1.입력 메시지
+String message = editmessage.getText().toString();
+
+// 2.데이터 담기
+bunndle.putString("message",message);
+
+//3. 프래그먼트 선언
+MainFragment mainFragment = new MainFragment();
+
+//4. 프래그먼트에 데이터 넘기기
+mainFragment.setArguments(bundle);
+
+//5. 프래그머너트 화면 보여주기
+transaction.replace(R.id.fragmentLayout, mainFragment).commit();
+
+
+//보낸 데이터 받기
+
+        Bundle extra = this.getArguments();
+        if(extra != null) {
+            extra = getArguments();
+            String title = extra.getString("title");
+            String name = extra.getString("name");
+            String time = extra.getString("time");
+
+            Toast.makeText(getActivity(),title+name+time,Toast.LENGTH_SHORT).show();
+
+        }
+
+
+/// 버튼 클릭시 팝업메뉴 
+https://kitesoft.tistory.com/116
+
+// volley를 이용한 회원가입( activity 간 데이터 이동)
+https://stickode.tistory.com/55
+https://developer.android.com/training/volley/requestqueue?hl=ko
+

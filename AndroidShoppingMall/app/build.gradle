@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.himedia.androidshoppingmall'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.himedia.androidshoppingmall"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // cardView 레이아웃을 사용하기 위해 추가 by Dean
+    implementation 'androidx.cardview:cardview:1.0.0'
+    // request, response 프로토콜제공(스레드 기능 포함된 심플 라이브러리) by Dean
+    implementation 'com.android.volley:volley:1.2.1'
+    // url 이미지를 가져오와 imageView등에 뿌려주는데 사용하는 라이브러리 Glide by Dean
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+}
